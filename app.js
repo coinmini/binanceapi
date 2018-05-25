@@ -42,22 +42,18 @@ const client = Binance({
 
 
 //3.389秒才成交
-
+//0.01794025
 let serverTime
 async function timeInterval() {
    serverTime = await client.time()
    console.log(serverTime)
-  // if (serverTime >= "1527229300000" ){
-  //   console.log(await client.order({
-  //     symbol: 'ETHBTC',
-  //     side: 'SELL',
-  //     type: 'MARKET',
-  //     quantity: 0.1,
-  //   }))  }
-  // if(serverTime >= "1527229750000"){
-  //   console.log("sell done")
-  // }
-
+  if (serverTime >= "1527229300000" ){
+    console.log(await client.order({
+      symbol: 'ETHBTC',
+      side: 'SELL',
+      type: 'MARKET',
+      quantity: 0.1,
+    }))  }
 }
 
 // https://api.binance.com/api/v3
