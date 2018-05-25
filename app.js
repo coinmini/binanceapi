@@ -54,9 +54,9 @@ async function timeInterval() {
   //     type: 'MARKET',
   //     quantity: 0.1,
   //   }))  }
-  if(serverTime >= "1527229750000"){
-    console.log("sell done")
-  }
+  // if(serverTime >= "1527229750000"){
+  //   console.log("sell done")
+  // }
 
 }
 
@@ -71,19 +71,20 @@ async function timeInterval() {
 
 
 // 下面是sell的格式，卖0.1个eth，按照ETH/BTC市场价
-async function sellCoin(){
-  console.log('i want to sell')
-  console.log(await client.order({
-    symbol: 'ETHBTC',
-    side: 'SELL',
-    type: 'MARKET',
-    quantity: 0.1,
-  }))
-}
 
-sellCoin()
+// async function sellCoin(){
+//   console.log('i want to sell')
+//   console.log(await client.order({
+//     symbol: 'ETHBTC',
+//     side: 'SELL',
+//     type: 'MARKET',
+//     quantity: 0.1,
+//   }))
+// }
+//
+// sellCoin()
 
-// setInterval(timeInterval, 50)
+setInterval(timeInterval, 50)
 
 
 
