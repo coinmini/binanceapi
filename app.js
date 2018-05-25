@@ -36,7 +36,7 @@ function all() {
     let serverTime = await client.time()
     console.log(serverTime)
 
-    if (serverTime >= "1527259300000" ){
+    if (serverTime >= "1527263400000" ){
       clearInterval(intervalObj);
       console.log(await client.order({
         symbol: 'ETHBTC',
