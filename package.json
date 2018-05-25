@@ -9,16 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "binance-api-node": "^0.7.6",
-    "bluebird": "^3.5.1",
-    "koa": "^2.3.0",
-    "koa-bodyparser": "^4.2.0",
-    "koa-logger": "^3.0.1",
-    "koa-router": "^7.4.0",
-    "koa-session": "^5.4.0",
-    "lodash": "^4.17.5",
-    "node-binance-api": "^0.6.0",
-    "node-fetch": "^2.1.1"
+    "binance-api-node": "^0.7.6"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
