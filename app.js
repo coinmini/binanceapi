@@ -27,10 +27,21 @@ const client = Binance({
 // //binance.buy("ETHBTC", 1, 0.0679); buy 1 eth ，价格是0.0679个btc
 // //binance.sell("ETHBTC", 1, 0.069); sell 1 the， 价格是0.0679个btc
 
-
+//50
 //0.179s 成交
+//0.244s
+//0.162
+//0.176s
+
+//25
+//0.162s
+
+//10
+//0.154
+
+
 function all() {
-  const intervalObj = setInterval(timeInterval, 50)
+  const intervalObj = setInterval(timeInterval, 100)
 
   async function timeInterval() {
     let serverTime = await client.time()
@@ -44,12 +55,45 @@ function all() {
         type: 'MARKET',
         quantity: 0.1,
       }))
+
+      console.log(await client.order({
+        symbol: 'ETHBNB',
+        side: 'SELL',
+        type: 'MARKET',
+        quantity: 0.1,
+      }))
+
       }
    }
 }
 
 all()
 
+//下面是计算新币上架的历史记录
+// async function myTrades() {
+//   console.log(await client.tradesHistory({
+//      symbol: 'ZENBNB',
+//      fromId: '0',
+//     }))
+//
+//   let aggTrades = await client.aggTrades({
+//     symbol: 'BTCUSDT',
+//     startTime: '1527060600000',
+//     endTime: '1527060630000'
+//    })
+//
+//
+//
+//     for (i=0; i< aggTrades.length; i++) {
+//       let aggId = aggTrades[i].aggId
+//       let price = aggTrades[i].price
+//       let quantity = aggTrades[i].quantity
+//       let timestamp = aggTrades[i].timestamp
+//
+//       console.log(aggId + ',' + timestamp +','+ parseFloat(price)+ ',' +parseFloat(quantity))
+//     }
+
+}
 
 // 下面是sell的格式，卖0.1个eth，按照ETH/BTC市场价
 
